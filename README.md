@@ -15,10 +15,7 @@ pip install -r requirements.txt
 ONNX是一个开放的深度学习模型表示标准，旨在实现深度学习框架之间的互操作性和跨平台部署的便利性。 可以作为深度学习模型部署在安卓端，本地端，Web端的中间格式。这里就是部署在Web端的demo。
 
 首先，项目主目录下有三个python文件：imgnet_resnet18.py，imgnet_resnet50.py，imgnet_resnet152.py，分别使用了ImageNet上预训练的ResNet18/50/152三个模型进行对应onnx文件的生成，可以根据需要运行，这里假设需要生成ResNet18的onnx文件。如果pycharm终端显示：
-
-```
-onnx OK
-```
+![image](https://github.com/Tcotyledons/AIDeploy/blob/main/pic/onnxOK.png)
 
 则证明ResNet18的onnx文件成功生成。
 
