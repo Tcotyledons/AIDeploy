@@ -1,4 +1,4 @@
-# ONNX+Flask+Web三件套部署ResNet 18/50/152 + 本地/云服务器部署
+# ONNX + Flask + Web三件套 + ResNet 18/50/152 + 本地/云服务器部署
 
 ## 0 环境配置
 
@@ -58,6 +58,13 @@ nohup python test.py &
 ```
 就成功将项目挂在后台进程运行啦，不得不夸一下腾讯云的服务器扩展功能做的挺好，包含了SFTP和编辑器，非常的方便！
 
-![image]()
+![image](https://github.com/Tcotyledons/AIDeploy/blob/main/pic/cloud.png)
 
 
+## 4.1 上传自己的图片进行预测
+和本地端不同的是，所有人都可以通过服务器公网进行访问，这里照样给出一个demo
+
+
+![image](https://github.com/Tcotyledons/AIDeploy/blob/main/pic/cloud_demo.png)
+
+至此，本项目就顺利完成了！
