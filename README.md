@@ -1,4 +1,4 @@
-# ONNX+Flask+Web三件套部署ResNet 18/50/152
+# ONNX+Flask+Web三件套部署ResNet 18/50/152 + 本地/云服务器部署
 
 ## 0 环境配置
 
@@ -32,7 +32,7 @@ ONNX是一个开放的深度学习模型表示标准，旨在实现深度学习�
 ort_session = onnxruntime.InferenceSession('onnx文件名')
 ```
 
-## 3 部署到Web端，浏览器进行验证
+## 3 部署到本地端，浏览器进行验证
 
 那么到这里为止，部署前的准备工作都已经完成了，这时候只需要启动项目就可以了，这里需要检查在pycharm的Edit Configurations的Script path是不是指向项目里的text.py文件，没问题的话启动，点击pycharm终端显示的网页如下图
 
@@ -40,7 +40,7 @@ ort_session = onnxruntime.InferenceSession('onnx文件名')
 
 就进入了项目的浏览器界面。
 
-## 4 上传自己的图片进行预测
+## 3.1 上传自己的图片进行预测
 
 然后就进入到了浏览器的界面，这里展示的是谷歌浏览器，模型是ResNet152。
 
@@ -49,3 +49,15 @@ ort_session = onnxruntime.InferenceSession('onnx文件名')
 点击"选择文件"，在点击预测，就可以得到图片的预测置信度top5的score和对应类别。
 
 ![image](https://github.com/Tcotyledons/AIDeploy/blob/main/pic/predict.jpg)
+
+## 4 部署到云服务器端
+云服务器可以去腾讯云轻量服务器薅一个月的羊毛，选择Ubuntu系统后，根据本地成功运行的环境照搬到云服务器上面（安装anaconda，利用conda安装所需的环境），然后就进入到项目的主目录，输入以下的命令运行：
+
+```
+nohup python test.py &
+```
+就成功将项目挂在后台进程运行啦，不得不夸一下腾讯云的服务器扩展功能做的挺好，包含了SFTP和编辑器，非常的方便！
+
+![image]()
+
+
